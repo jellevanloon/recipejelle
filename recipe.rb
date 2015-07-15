@@ -83,7 +83,7 @@ end
 #Asks what user wants to do. Gives help with usable methods
 def what_to_do(count)
   puts "what do you want to do?"
-  puts "type help for availible commands!"
+  puts "type help for available commands!"
   answer = gets.chomp
   if answer.include? "help" or answer.include? "Help"
     unless count >= 0
