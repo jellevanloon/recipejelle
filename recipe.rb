@@ -123,6 +123,13 @@ def add_pepper(count)
   what_to_do(count)
 end
 
+#Serve dish and terminate the script!
+def serve_dish
+  puts "You've added all ingredients in the correct way, well done!"
+  puts "You can now enjoy your meal!"
+  puts "Good bye!!"
+  exit
+end
 
 #Asks what user wants to do. Gives help with usable commands.
 def what_to_do(count)
@@ -149,6 +156,8 @@ def what_to_do(count)
     add_pepper(count)
   elsif answer.include? "exit"
     exit
+  elsif answer.include? "serve" and count > 4
+    serve_dish
   else
     puts "Thats not the right order! Try again"
     sleep 2
@@ -191,8 +200,11 @@ def help(count, answer)
   sleep 0.5
   puts "Add pepper"
   sleep 0.5
+  puts "Serve dish"
+  sleep 0.5
   puts "Exit"
   sleep 0.5
+  puts "List will show only available commands, check back later for more!"
   puts "type anything to continue"
   answer = gets.chomp.downcase
   if answer == 'y'
