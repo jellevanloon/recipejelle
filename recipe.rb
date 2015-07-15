@@ -110,7 +110,6 @@ def what_to_do(count)
       puts "break eggs"
       sleep 0.5
     end
-    sleep 0.5
     puts "add salt"
     sleep 0.5
     puts "exit"
