@@ -98,35 +98,8 @@ def what_to_do(count)
   sleep 0.5
   puts "Type help for available commands!"
   answer = gets.chomp.downcase
-  if answer.include? "help" or answer.include? "Help"
-    unless count >= 0
-      puts "You can choose between:"
-      sleep 0.5
-    end
-    unless count > 0
-      puts "Scrape potatoes"
-      sleep 0.5
-    end
-    unless count > 1
-      puts "Cut potatoes"
-      sleep 0.5
-    end
-    unless count > 2
-      puts "Add potatoes to pan"
-      sleep 0.5
-    end
-    unless count > 3
-      puts "Stir"
-      sleep 0.5
-    end
-    unless count > 4
-      puts "Break eggs"
-      sleep 0.5
-    end
-    puts "Add salt"
-    sleep 0.5
-    puts "Exit"
-    answer = gets.chomp
+  if answer.include? "help"
+    help(count, answer)
   end
   if answer.include? "scrape" and count == 0
     scrape_potatoes(count)
@@ -152,6 +125,45 @@ end
 #Try again class when user gave a wrong input.
 def try_again(count)
   what_to_do(count)
+end
+
+#Help method
+def help(count, answer)
+  unless count >= 0
+    puts "You can choose between:"
+    sleep 0.5
+  end
+  unless count > 0
+    puts "Scrape potatoes"
+    sleep 0.5
+  end
+  unless count > 1
+    puts "Cut potatoes"
+    sleep 0.5
+  end
+  unless count > 2
+    puts "Add potatoes to pan"
+    sleep 0.5
+  end
+  unless count > 3
+    puts "Stir"
+    sleep 0.5
+  end
+  unless count > 4
+    puts "Break eggs"
+    sleep 0.5
+  end
+  puts "Add salt"
+  sleep 0.5
+  puts "Exit"
+  sleep 0.5
+  puts "type anything to continue"
+  answer = gets.chomp.downcase
+  if answer == 'y'
+    what_to_do(count)
+  else
+    what_to_do(count)
+  end
 end
 
 #Command to start the programme.
