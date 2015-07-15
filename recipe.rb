@@ -38,6 +38,7 @@ def add_potatoes_to_pan(count)
   what_to_do(count)
 end
 
+#Stirring
 def stir(count)
   minutes = 30
   loop do
@@ -53,6 +54,7 @@ def stir(count)
   what_to_do(count)
 end
 
+#Breaking Eggs
 def break_eggs(count)
   eggs = [1, 2, 3, 4, 5, 6]
   eggs.each do |egg|
@@ -77,6 +79,8 @@ def add_salt(count)
   count += 1
   what_to_do(count)
 end
+
+#Asks what user wants to do. Gives help with usable methods
 def what_to_do(count)
   puts "what do you want to do?"
   puts "type help for availible commands!"
@@ -133,6 +137,7 @@ def what_to_do(count)
   end
 end
 
+#Try again class when user gave a wrong input
 def try_again(count)
   what_to_do(count)
 end
