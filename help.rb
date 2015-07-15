@@ -41,3 +41,29 @@ def help(count, answer)
     what_to_do(count)
   end
 end
+#Oracle help method
+def oracle_help
+  puts "These are the available oracle commands"
+  sleep 0.5
+  puts "What is my name?"
+  sleep 0.5
+  puts "What is your name?"
+  sleep 0.5
+  puts "Where do you live?"
+  sleep 0.5
+  puts "Where were you made?"
+  sleep 0.5
+  puts "What day is it?"
+  sleep 0.5
+  puts "How old are you?"
+  sleep 0.5
+  puts "How old am I?"
+  sleep 0.5
+  puts "Reverse: [enter text here]"
+  sleep 0.5
+  puts "Is this a palindrome?"
+  sleep 0.5
+  puts "exit"
+  sleep 0.5
+  question
+end

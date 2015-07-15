@@ -1,6 +1,3 @@
-load 'help.rb'
-#Counter for keeping track which methods should be available. Used in help function too.
-count = 0
 #	Scrape	the	Potatoes.
 def scrape_potatoes(count)
   counter	=	1
@@ -129,7 +126,19 @@ def serve_dish
   puts "You've added all ingredients in the correct way, well done!"
   puts "You can now enjoy your meal!"
   puts "Good bye!!"
-  exit
+  sleep 2
+  puts "Do you want to try my other programme?"
+  puts "Yes, no or restart"
+  answer = gets.chomp.downcase
+  if answer.include? "yes"
+    puts "Welcome to Oracle"
+    question
+  elsif answer.include? "restart"
+    count = 0
+    what_to_do(count)
+  else
+    exit
+  end
 end
 
 #Asks what user wants to do. Gives help with usable commands.
@@ -170,6 +179,5 @@ end
 def try_again(count)
   what_to_do(count)
 end
-
-#Command to start the programme.
-what_to_do(count)
+#Counter for keeping track which methods should be available. Used in help function too.
+count = 0
