@@ -1,5 +1,6 @@
+#Counter for keeping track which methods should be available. Used in help function too.
 count = 0
-#	Scrape	the	Potatoes
+#	Scrape	the	Potatoes.
 def scrape_potatoes(count)
   counter	=	1
   while counter	<	6
@@ -12,7 +13,7 @@ def scrape_potatoes(count)
   what_to_do(count)
 end
 
-# Cut potatoes
+# Cut potatoes.
 def cut_potatoes(count)
   counter = 1
   until counter == 6
@@ -25,7 +26,7 @@ def cut_potatoes(count)
   what_to_do(count)
 end
 
-#Add potatoes and onion to the pan
+#Add potatoes and onion to the pan.
 def add_potatoes_to_pan(count)
   for counter in 1..5
     puts "Add potato #{counter} to the pan."
@@ -38,7 +39,7 @@ def add_potatoes_to_pan(count)
   what_to_do(count)
 end
 
-#Stirring
+#Stirring.
 def stir(count)
   minutes = 30
   loop do
@@ -54,7 +55,7 @@ def stir(count)
   what_to_do(count)
 end
 
-#Breaking Eggs
+#Breaking Eggs.
 def break_eggs(count)
   eggs = [1, 2, 3, 4, 5, 6]
   eggs.each do |egg|
@@ -67,6 +68,8 @@ def break_eggs(count)
   count += 1
   what_to_do(count)
 end
+
+#Adding salt with comments on how much salt is used.
 def add_salt(count)
   puts "How many pinches of salt"
   userinput = gets.chomp
@@ -79,7 +82,7 @@ def add_salt(count)
       sleep 0.5
     end
     if counter == 5
-      puts "You ruined your dish!"
+      puts "You ruined your omelette!"
       sleep 0.5
     end
     counter += 1
@@ -89,7 +92,7 @@ def add_salt(count)
   what_to_do(count)
 end
 
-#Asks what user wants to do. Gives help with usable methods
+#Asks what user wants to do. Gives help with usable commands.
 def what_to_do(count)
   puts "What do you want to do?"
   sleep 0.5
@@ -146,8 +149,10 @@ def what_to_do(count)
   end
 end
 
-#Try again class when user gave a wrong input
+#Try again class when user gave a wrong input.
 def try_again(count)
   what_to_do(count)
 end
+
+#Command to start the programme.
 what_to_do(count)
