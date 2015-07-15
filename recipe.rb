@@ -92,6 +92,38 @@ def add_salt(count)
   what_to_do(count)
 end
 
+#Add pepper with comments to user about how much pepper is added.
+def add_pepper(count)
+  puts "How much pepper do you want. Answer with 'a little', 'spicy' and 'red peppers only'"
+  userinput = gets.chomp.downcase
+  counter = 0
+  if userinput.include? "little"
+    counter = 1
+  elsif userinput.include? "spicy"
+    counter = 3
+  elsif userinput.include? "red pepper"
+    counter = 6
+  end
+  counts = 0
+  until counts > counter
+    puts "Adding some pepper"
+    sleep 0.5
+    if counts == 3 && counter == 3
+      puts "You like it spicy!"
+      sleep 0.5
+    end
+    if counts == 5 && counter == 6
+      puts "You like it very very hot!"
+      sleep 0.5
+    end
+    counts += 1
+  end
+  puts "Done adding pepper!"
+  count += 1
+  what_to_do(count)
+end
+
+
 #Asks what user wants to do. Gives help with usable commands.
 def what_to_do(count)
   puts "What do you want to do?"
@@ -113,6 +145,8 @@ def what_to_do(count)
     break_eggs(count)
   elsif answer.include? "salt" and count > 4
     add_salt(count)
+  elsif answer.include? "pepper" and count > 4
+    add_pepper(count)
   elsif answer.include? "exit"
     exit
   else
@@ -154,6 +188,8 @@ def help(count, answer)
     sleep 0.5
   end
   puts "Add salt"
+  sleep 0.5
+  puts "Add pepper"
   sleep 0.5
   puts "Exit"
   sleep 0.5
