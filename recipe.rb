@@ -72,47 +72,49 @@ def add_salt(count)
   userinput = gets.chomp
   counter = 1
   until counter > userinput.to_i
-    puts "adding a pinch of salt"
+    puts "Adding a pinch of salt"
     sleep 0.5
     counter += 1
   end
+  puts "Done adding salt!"
   count += 1
   what_to_do(count)
 end
 
 #Asks what user wants to do. Gives help with usable methods
 def what_to_do(count)
-  puts "what do you want to do?"
-  puts "type help for available commands!"
-  answer = gets.chomp
+  puts "What do you want to do?"
+  sleep 0.5
+  puts "Type help for available commands!"
+  answer = gets.chomp.downcase
   if answer.include? "help" or answer.include? "Help"
     unless count >= 0
-      puts "you can choose between:"
+      puts "You can choose between:"
       sleep 0.5
     end
     unless count > 0
-      puts "scrape potatoes"
+      puts "Scrape potatoes"
       sleep 0.5
     end
     unless count > 1
-      puts "cut potatoes"
+      puts "Cut potatoes"
       sleep 0.5
     end
     unless count > 2
-      puts "add potatoes to pan"
+      puts "Add potatoes to pan"
       sleep 0.5
     end
     unless count > 3
-      puts "stir"
+      puts "Stir"
       sleep 0.5
     end
     unless count > 4
-      puts "break eggs"
+      puts "Break eggs"
       sleep 0.5
     end
-    puts "add salt"
+    puts "Add salt"
     sleep 0.5
-    puts "exit"
+    puts "Exit"
     answer = gets.chomp
   end
   if answer.include? "scrape" and count == 0
