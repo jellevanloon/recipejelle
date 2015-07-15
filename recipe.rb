@@ -74,6 +74,14 @@ def add_salt(count)
   until counter > userinput.to_i
     puts "Adding a pinch of salt"
     sleep 0.5
+    if counter == 3
+      puts "You like a lot of salt!"
+      sleep 0.5
+    end
+    if counter == 5
+      puts "You ruined your dish!"
+      sleep 0.5
+    end
     counter += 1
   end
   puts "Done adding salt!"
@@ -133,7 +141,7 @@ def what_to_do(count)
     exit
   else
     puts "Thats not the right order! Try again"
-    sleep 5
+    sleep 2
     try_again(count)
   end
 end
